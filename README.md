@@ -61,5 +61,15 @@ Start Server with port no and then start multiple clients. To test on localhost:
 
 `./Client.o 127.0.0.1 8000`
 
+Known issue: When listening for a subscribed message, client needs to read from server first. (just hit enter at the listener) Should be fixed shortly.
+
+### Sample test flow:
+1. `./Server.o 8000` in terminal 1
+2. `./Client.o 127.0.0.1 8000` `./Client.o 127.0.0.1 8000` `./Client.o 127.0.0.1 8000` on 3 other terminals, 2, 3, 4.
+3. Term 2  and Term 3 : `consume` Term 4 : `produce`
+4.Subscribe to queues: Term 2: `>4wasp` 
+5.Send essage from Term 4: `*4wasp11Hello world `
+
+
 
 
