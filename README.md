@@ -70,6 +70,12 @@ Known issue: When listening for a subscribed message, client needs to read from 
 4.Subscribe to queues: Term 2: `>4wasp` 
 5.Send essage from Term 4: `*4wasp11Hello world `
 
-
+### TBD:
+1. Remove statics, make thread-safe
+2. Use Auto ptr
+3. Decouple protocol vs queue to handle generic data in queue and specifics in protocol
+4. Make read and write drain buffer effectively
+5. Add sequencing
+6. Client /server side disconnect /error handling 
 
 
